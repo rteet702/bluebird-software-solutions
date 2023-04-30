@@ -23,7 +23,12 @@ export default function Home() {
                 id="hero"
                 className="h-[100svh] xl:flex items-center justify-center xl:px-32 bg-gradient-to-b from-sky-300 via-sky-200 to-[#74a8da]"
             >
-                <div className="flex-[2] flex flex-col gap-4 items-start relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 100, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className="flex-[2] flex flex-col gap-4 items-start relative z-10"
+                >
                     <h1 className="text-8xl">
                         Web Design and Development
                         <span className="block text-6xl">
@@ -46,7 +51,7 @@ export default function Home() {
                             Schedule a Meeting
                         </button>
                     </div>
-                </div>
+                </motion.div>
                 <motion.div
                     initial={{ opacity: 0, right: -100 }}
                     animate={{ opacity: 100, right: 0 }}
